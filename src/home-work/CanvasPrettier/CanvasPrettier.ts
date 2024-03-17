@@ -42,8 +42,6 @@ export class CanvasPrettier {
     this.context.strokeStyle = 'black';
     this.context.lineWidth = 2;
     this.context.stroke();
-    
-
     // Draw y-axis
     this.context.beginPath();
     this.context.moveTo(this.centerX, 0);
@@ -80,11 +78,12 @@ export class CanvasPrettier {
   }
 
   public drawAxisMarksX(): void {
+    const OFFSET = 2;
     let counter = 1;
     for (let x = this.centerX + this.step; x < this.canvas.width; x += this.step) {
       this.context.beginPath();
-      this.context.moveTo(x, this.centerY - 2);
-      this.context.lineTo(x, this.centerY + 2);
+      this.context.moveTo(x, this.centerY - OFFSET);
+      this.context.lineTo(x, this.centerY + OFFSET);
       this.context.stroke();
       this.context.fillText(counter.toString(), x - 3, this.centerY + 15);
       counter++;
@@ -92,8 +91,8 @@ export class CanvasPrettier {
     counter = 1;
     for (let x = this.centerX - this.step; x > 0; x -= this.step) {
       this.context.beginPath();
-      this.context.moveTo(x, this.centerY - 2);
-      this.context.lineTo(x, this.centerY + 2);
+      this.context.moveTo(x, this.centerY - OFFSET);
+      this.context.lineTo(x, this.centerY + OFFSET);
       this.context.stroke();
       this.context.fillText(`-${counter.toString()}`, x - 5, this.centerY + 15);
       counter++;
@@ -101,11 +100,12 @@ export class CanvasPrettier {
   }
 
   public drawAxisMarksY(): void {
+    const OFFSET = 2;
     let counter = 1;
     for (let y = this.centerY + this.step; y < this.canvas.height; y += this.step) {
       this.context.beginPath();
-      this.context.moveTo(this.centerX - 2, y);
-      this.context.lineTo(this.centerX + 2, y);
+      this.context.moveTo(this.centerX - OFFSET, y);
+      this.context.lineTo(this.centerX + OFFSET, y);
       this.context.stroke();
       this.context.fillText(`- ${counter.toString()}`, this.centerX + 10, y + 3);
       counter++;
@@ -113,8 +113,8 @@ export class CanvasPrettier {
     counter = 1;
     for (let y = this.centerY - this.step; y > 0; y -= this.step) {
       this.context.beginPath();
-      this.context.moveTo(this.centerX - 2, y);
-      this.context.lineTo(this.centerX + 2, y);
+      this.context.moveTo(this.centerX - OFFSET, y);
+      this.context.lineTo(this.centerX + OFFSET, y);
       this.context.stroke();
       this.context.fillText(counter.toString(), this.centerX + 10, y + 3);
       counter++;

@@ -13,7 +13,7 @@
  *
  */
 
-import { CanvasPrettier } from "./CanvasPrettier/CanvasPrettier";
+import { CanvasPrettier } from './CanvasPrettier/CanvasPrettier';
 
 function main() {
   const CANVAS_PRUEBA = new CanvasPrettier();

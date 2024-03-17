@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="../../dist/bundle.js"></script>
+  <title>Figuras Geométricas</title>
+</head>
+<body>
+
+  <ul> 
+    <li><a href="./index.html">Home</a></li>
+  </ul>
+
+  <h1>Calculadora Gráfica - Aday Cuesta Correa</h1>
+  <canvas id="myCanvas" style="border:1px solid #000;"></canvas>
+
+  <script>
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
+    function ajustarCanvas() {
+      canvas.width = document.documentElement.clientWidth;
+      canvas.height = document.documentElement.clientHeight;
+    }
+    window.addEventListener('resize', ajustarCanvas);
+    ajustarCanvas();
+  </script>
+
+</body>
+</html>

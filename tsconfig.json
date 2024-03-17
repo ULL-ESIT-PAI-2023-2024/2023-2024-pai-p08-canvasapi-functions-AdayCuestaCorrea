@@ -1,12 +1,12 @@
 {
   "display": "Configuration for Graphics Programming in PAI",
   "compilerOptions": {
+    "esModuleInterop": true,
     "target": "es2022",
     "module": "commonjs",
     "allowJs": true,
     "rootDir": "./",
-    "outDir": "./",
-    "declaration": false,                     /* Generate (or not) .d.ts files for every TypeScript file inside your project */
+    "outDir": "./dist",
     "declaration": true,
     "alwaysStrict": true,                     /* Parse in strict mode and emit "use strict" for each source file */
     "strict": true,                           /* Enable all strict type-checking options */
@@ -17,6 +17,7 @@
     "noUnusedLocals": true,                   /* Report errors on unused local variables */
     "forceConsistentCasingInFileNames": true  /* Force all file names to have the same case style */
   },
+  "include": ["src/home-work/**/*.ts"],
   "exclude": [
         "node_modules",
         "build",
